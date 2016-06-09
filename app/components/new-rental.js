@@ -7,9 +7,10 @@ export default Ember.Component.extend({
       this.set('addNewRental', true);
     },
 
-    save1() {
-      var params = {
+    saveRentalAtRentalForm() {
+      var rentalInput = {
         owner: this.get('owner') ? this.get('owner') : "",
+        city: this.get('city') ? this.get('city') : "",
         type: this.get('type') ? this.get('type') : "",
         image: this.get('image') ? this.get('image') : "",
         bedrooms: this.get('bedrooms') ? this.get('bedrooms') :"",
@@ -21,7 +22,7 @@ export default Ember.Component.extend({
     //    return params;
     //  }
 
-      this.sendAction('save2', params);
+      this.sendAction('saveRentalInsideCityRouteFromComponent', rentalInput);
     }
   }
 });
