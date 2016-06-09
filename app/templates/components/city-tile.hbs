@@ -1,2 +1,10 @@
-<li>{{city.name}}{{city.contry}}</li>
-<button {{action 'save3'}}>New City</button>
+<p>{{city.name}}'s Details</p>
+<p>Country: {{city.country}}</p>
+<hr>
+<h4>Rentals available in {{model.name}}</h4>
+
+<ul>
+  {{#each city.rentals as |rental|}}
+    <li>{{#link-to 'rental' rental.id}} {{rental.owner}} {{/link-to}}</li>
+  {{/each}}
+</ul>

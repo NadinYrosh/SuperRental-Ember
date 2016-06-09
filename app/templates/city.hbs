@@ -1,12 +1,6 @@
 <h1> Welcome to {{model.name}} </h1>
-<p>Country: {{model.country}}</p>
-<hr>
-<h4>Rentals available in {{model.name}}</h4>
 
-<ul>
-  {{#each model.rentals as |rental|}}
-    <li>{{#link-to 'rental' rental.id}} {{rental.owner}} {{/link-to}}</li>
-  {{/each}}
-</ul>
+{{city-tile city=model destroyCity="destroyCity"}}
+<!-- {{city-tile city=model}} -->
 
-{{new-rental saveRentalInsideCityRouteFromComponent="saveRentalInsideCityRouteFromTemplate" city=model destroyRental="destroyRental"}}
+{{new-rental saveRentalInsideCityRouteFromComponent="saveRentalInsideCityRouteFromTemplate" city=model}}
