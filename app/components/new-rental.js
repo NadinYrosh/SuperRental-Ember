@@ -16,13 +16,12 @@ export default Ember.Component.extend({
         bedrooms: this.get('bedrooms') ? this.get('bedrooms') :"",
       };
       this.set('addNewRental', false);
-    //   if(params.owner === "" || params.city === "" || params.type === "" || params.image === "" || params.bedrooms === ""){
-    //    return alert("Please enter something");
-    //  }else{
-    //    return params;
-    //  }
-
       this.sendAction('saveRentalInsideCityRouteFromComponent', rentalInput);
     }
   }
 });
+//   if(params.owner === "" || params.city === "" || params.type === "" || params.image === "" || params.bedrooms === ""){
+//    return alert("Please enter something");
+//  }else{
+//    return params;
+//  }
