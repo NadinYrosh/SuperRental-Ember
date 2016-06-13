@@ -3,10 +3,12 @@
 We hope you find exacly what you're looking for in a place to stay.
 
 <h2> Cities </h2>
+
 {{new-city saveCity="saveCityOnCityRoute"}}
+
 <ul>
   {{#each model as |city|}}
-    <li>{{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
+    <li>{{city-popularity city}} {{#link-to 'city' city.id}}{{city.name}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
